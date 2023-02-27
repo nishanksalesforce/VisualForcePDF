@@ -1,0 +1,47 @@
+<apex:page renderAs="pdf" standardController="Account" applyBodyTag="false">
+    <head>
+        <style>
+            /* Add any custom styles for the PDF here */
+            .header {
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            .table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            .table td, .table th {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+            .table th {
+                background-color: #f2f2f2;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <p>Account Information</p>
+        </div>
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <td>{!Account.Name}</td>
+            </tr>
+            <tr>
+                <th>Industry</th>
+                <td>{!Account.Industry}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{!Account.Phone}</td>
+            </tr>
+            <tr>
+                <th>Website</th>
+                <td>{!Account.Website}</td>
+            </tr>
+        </table>
+    </body>
+</apex:page>
